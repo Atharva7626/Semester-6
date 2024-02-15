@@ -1,50 +1,62 @@
 import java.util.*;
 import java.lang.*;
 
-
 public class a2 implements Runnable {
     
-    String nm;
+    int a[]=new int[1000];
 
-    a2(String nm){
-        this.nm=nm;
 
-    }
-    
     public void run(){
-
-        System.out.print("\n");
-        for (int i=100;i>0;--i){
-
-            System.out.print("   "+i+"  ");
-
-        }
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-         
-            
-            e.printStackTrace();
-        }
-        System.out.print("\n  Thread old name : "+Thread.currentThread().getName());
-
-        Thread.currentThread().setName(nm);
-        System.out.print("\n Thread new name : "+Thread.currentThread().getName());
-
+        
     }
+    public static void main(String args []){
 
-    
-
-    public static void main (String a[]){
-
-        Scanner sc=new Scanner(System.in);
-
-        System.out.print("\n Enter new Thread  name : ");
-        String s=sc.next();
-
-        a2 t=new a2(s);
+        a2 t=new a2();
         Thread th=new Thread(t);
         th.start();
+
+        a2 t1=new a2();
+        Thread th1=new Thread(t1);
+        th1.start();
+
+        a2 t2=new a2();
+        Thread th2=new Thread(t2);
+        th2.start();
+
+        a2 t3=new a2();
+        Thread th3=new Thread(t3);
+        th3.start();
+        
+        a2 t4=new a2();
+        Thread th4=new Thread(t4);
+        th4.start();
+
+        a2 t5=new a2();
+        Thread th5=new Thread(t5);
+        th5.start();
+
+        a2 t6=new a2();
+        Thread th6=new Thread(t6);
+        th6.start();
+
+        a2 t7=new a2();
+        Thread th7=new Thread(t7);
+        th7.start();
+
+        a2 t8=new a2();
+        Thread th8=new Thread(t8);
+        th8.start();
+
+        a2 t9=new a2();
+        Thread th9=new Thread(t9);
+        th9.start();
+/*
+        a2 t=new a2();
+        Thread th=new Thread(t);
+        th.start();
+ */
+        
+
+
     }
-    
 }
